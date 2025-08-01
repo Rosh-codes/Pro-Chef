@@ -1,6 +1,6 @@
 # 👨‍🍳 Pro Chef
 
-Pro Chef is a simple React-based recipe app inspired by the "Chef Claude" project in Scrimba’s Learn React course. It lets users browse, add, and edit recipes—helping you learn core React concepts like state, forms, and conditional rendering.
+Pro Chef is a simple React-based recipe app . It lets users browse, add, and edit recipes—helping you learn core React concepts like state, forms, and conditional rendering.
 
 ---
 
