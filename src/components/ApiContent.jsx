@@ -11,7 +11,7 @@ export default function ApiContent(props){
                 <h3>Ready for your recipe?</h3>
                 <p>Generate your recipe by clicking the button</p>
             </div>
-            <button>Get Your Recipe</button>      
+            <button onClick={props.toggleRecipe}>Get Your Recipe</button>      
               </div>:null}
         
         </div>
