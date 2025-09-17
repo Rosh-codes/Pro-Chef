@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef,useEffect} from "react";
 import ApiContent from "./ApiContent";
 import Recipe from "./Recipe";
 
@@ -6,7 +6,12 @@ export default function MainContent() {
     const [foodItems, setFoodItems] = useState([]);
     const [showRecipe, setShowRecipe] = useState(false);
     const [recipe, setRecipe] = useState("");
-
+    const Ref = useRef(null)
+    useState(()=>{
+        if(Ref.current&&recipe){
+            Ref.current.scrollIntoView()
+        }
+    },[recipe])
     function submit(FormData) {
         const Ingredient = FormData.get("Ingredient");
         setFoodItems((prev) => [...prev, Ingredient]);
@@ -29,6 +34,7 @@ export default function MainContent() {
                         foodItems={foodItems}
                         toggleRecipe={toggleRecipe}
                         setRecipe={setRecipe}
+                        ref ={Ref}
                     />
                 </section>
             )}
