@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getRecipeFromMistral } from "../ai";
 
-export default function ApiContent({ foodItems, toggleRecipe, setRecipe }) {
+export default function ApiContent({ foodItems, toggleRecipe, setRecipe , ref }) {
     const [loading, setLoading] = useState(false);
 
     async function handleRecipeFetch() {
@@ -20,7 +20,7 @@ export default function ApiContent({ foodItems, toggleRecipe, setRecipe }) {
             <ul>{MappedFoodItems}</ul>
 
             {foodItems.length > 3 && (
-                <div className="recipeContainer">
+                <div ref={ref} className="recipeContainer">
                     <div>
                         <h3>Ready for your recipe?</h3>
                         <p>Generate your recipe by clicking the button</p>
